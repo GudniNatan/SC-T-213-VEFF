@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>httpIntro</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>  
+        <form target="_blank" action="submitEval.php">
+            <fieldset>
+                <legend>Personal information:</legend>
+                <div>
+                    <label for="firstname">First name:</label>
+                    <input type="text" name="firstname" id="firstname">
+                </div>
+                <div>
+                    <label for="lastname">Last name:</label>
+                    <input type="text" name="lastname" id="lastname">
+                </div>
+                <div>
+                    <label for="ssn">Social security number:</label>
+                    <input type="text" name="ssn" id="ssn">
+                </div>
+                <div>
+                    <div>Gender:</div>
+                    <div>
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label for="male">Male</label>                    
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" id="other" value="other" checked>
+                        <label for="male">Other</label>
+                    </div>         
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Course context:</legend>
+                <div>
+                    <label for="university">University:</label>
+                    <input type="text" name="university" id="university" value="RU" disabled>
+                </div>
+                <div>
+                    <label for="school">School:</label>
+                    <select id="school" name="school" disabled>
+                        <option value="CS">Computer Science</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="course">Course:</label>
+                    <input type="text" name="course" id="course" value="T-213-VEFF" disabled>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Which lectures did you attend?</legend>
+                <div>
+                    <input type="checkbox" name="lectures" id="L1" value="L1">
+                    <label for="L1">L1: Introduction</label>                    
+                </div>
+                <div>
+                    <input type="checkbox" name="lectures" id="L2" value="L2">
+                    <label for="L2">L2: Networks</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="lectures" id="L3" value="L3">
+                    <label for="L3">L3: HTML I</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Please describe your overall impression of the course</legend>
+                <textarea name="impression" id="impression" rows="10" cols="50">My impression of this course is...</textarea>
+            </fieldset>
+            <input type="submit" value="Submit Evaluation">
+        </form> 
+    </body>
+</html>
