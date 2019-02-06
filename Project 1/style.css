@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Arsenal');
+body {
+    margin: 0;
+    font-family: 'Arsenal', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main>div {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0.1rem;
+    width: 100%;
+    padding: 1.5rem 0.5rem 0;
+}
+
+main>div>figure {
+    background-color: #D3D4C4;
+    border-radius: 3rem;
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+header>*,
+footer>* {
+    display: inline;
+    max-width: 45%;
+    text-align: justify;
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+footer {
+    padding: 0 1rem 1rem;
+}
+
+a {
+    color: black;
+}
+
+.box {
+    box-sizing: border-box;
+    background-color: #D3D4C4;
+    border-radius: 1rem;
+    border: 0.15rem solid #000;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+input[type=submit] {
+    background-color: inherit;
+    border: none;
+}
+
+.big {
+    font-size: 1.17em;
+}
+
+img {
+    max-width: 100%;
+}
+
+.hamburgerBar {
+    width: 40px;
+    height: 6px;
+    background-color: black;
+    margin: 8px 0;
+}
+
+#imprint {
+    text-align: right;
+}
+
+@media only screen and (min-width: 851px) {
+    #hamburger {
+        display: none;
+    }
+    main>div {
+        width: 425.5px;
+        max-width: 50%;
+        padding: 1.5rem 0.1rem 0;
+    }
+}
+
+@media only screen and (max-width: 851px) {
+    .disappears {
+        display: none;
+    }
+    #hamburger {
+        display: inline-block;
+        padding: 1rem;
+    }
+    header {
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    main>div {
+        width: 380px;
+        max-width: 33.3%;
+    }
+}
