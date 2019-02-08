@@ -1,73 +1,69 @@
 @import url('https://fonts.googleapis.com/css?family=Arsenal');
 body {
-    margin: 0;
     font-family: 'Arsenal', sans-serif;
+    margin: 0;
+}
+
+header,
+footer {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 1rem;
+    max-width: 1200px;
+    padding: 0 3rem;
+    width: 85%;
+}
+
+header {
+    align-items: center;
+    justify-content: space-around;
+}
+
+header>p {
+    margin: .5em 0;
+}
+
+footer {
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+}
+
+footer>div {
+    display: inline-block;
+    max-width: 42%;
+    text-align: justify;
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0 0.2rem;
 }
 
-main>div {
+.menuItem {
     box-sizing: border-box;
     display: inline-block;
-    padding: 0.1rem;
+    padding: .1rem;
+    padding: 1.5rem .5rem 0;
     width: 100%;
-    padding: 1.5rem 0.5rem 0;
 }
 
-main>div>figure {
+.menuItem>figure {
     background-color: #D3D4C4;
-    border-radius: 3rem;
     margin: 0;
-    padding: 1rem;
-    width: 100%;
     max-width: 100%;
+    padding: 1rem;
     text-align: center;
-}
-
-header>*,
-footer>div {
-    display: inline;
-    max-width: 42%;
-    text-align: justify;
-}
-
-header,
-footer {
-    display: flex;
-    padding: 0 3rem;
-    max-width: 1200px;
-    width: 85%;
-    margin: 0 auto;
-    margin-top: 1rem;
-}
-
-footer {
-    padding: 1.5rem 1rem;
-    justify-content: space-between;
-}
-
-header {
-    justify-content: space-around;
-    align-items: center;
+    width: 100%;
 }
 
 a {
-    color: black;
+    color: #000;
 }
 
-.box {
-    box-sizing: border-box;
-    background-color: #D3D4C4;
-    border-radius: 1rem;
-    border: 0.15rem solid #000;
-}
-
-.underlined {
-    text-decoration: underline;
+img {
+    max-width: 100%;
 }
 
 input[type=submit] {
@@ -75,19 +71,26 @@ input[type=submit] {
     border: none;
 }
 
+.box {
+    background-color: #D3D4C4;
+    border: .15rem solid #000;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
 .big {
     font-size: 1.3em;
 }
 
-img {
-    max-width: 100%;
-}
-
 .hamburgerBar {
-    width: 40px;
+    background-color: #000;
     height: 6px;
-    background-color: black;
     margin: 8px 0;
+    width: 40px;
 }
 
 #hamburger {
@@ -103,18 +106,14 @@ img {
     display: none;
 }
 
-header>p {
-    margin: 0.5em 0;
-}
-
 @media only screen and (min-width: 851px) {
     #hamburger {
         display: none;
     }
-    main>div {
-        width: 425.5px;
+    .menuItem {
         max-width: 50%;
-        padding: 1.5rem 0.1rem 0;
+        padding: 1.5rem .1rem 0;
+        width: 425.5px;
     }
     .disappears {
         display: initial;
@@ -124,11 +123,9 @@ header>p {
     }
 }
 
-@media only screen and (max-width: 851px) {}
-
 @media only screen and (min-width: 1201px) {
-    main>div {
-        width: 380px;
+    .menuItem {
         max-width: 33.3%;
+        width: 380px;
     }
 }
