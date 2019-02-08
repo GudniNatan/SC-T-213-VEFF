@@ -29,17 +29,15 @@ main>div>figure {
 }
 
 header>*,
-footer>* {
+footer>div {
     display: inline;
-    max-width: 45%;
+    max-width: 42%;
     text-align: justify;
 }
 
 header,
 footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 3rem;
     max-width: 1200px;
     width: 85%;
@@ -48,7 +46,13 @@ footer {
 }
 
 footer {
-    padding: 0 1rem 1rem;
+    padding: 1.5rem 1rem;
+    justify-content: space-between;
+}
+
+header {
+    justify-content: space-around;
+    align-items: center;
 }
 
 a {
@@ -72,7 +76,7 @@ input[type=submit] {
 }
 
 .big {
-    font-size: 1.17em;
+    font-size: 1.3em;
 }
 
 img {
@@ -86,8 +90,21 @@ img {
     margin: 8px 0;
 }
 
+#hamburger {
+    display: inline-block;
+    padding: 1rem;
+}
+
 #imprint {
     text-align: right;
+}
+
+.disappears {
+    display: none;
+}
+
+header>p {
+    margin: 0.5em 0;
 }
 
 @media only screen and (min-width: 851px) {
@@ -99,20 +116,15 @@ img {
         max-width: 50%;
         padding: 1.5rem 0.1rem 0;
     }
-}
-
-@media only screen and (max-width: 851px) {
     .disappears {
-        display: none;
-    }
-    #hamburger {
-        display: inline-block;
-        padding: 1rem;
+        display: initial;
     }
     header {
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
+
+@media only screen and (max-width: 851px) {}
 
 @media only screen and (min-width: 1201px) {
     main>div {
