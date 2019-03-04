@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sudoku</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <main class="container-fluid">
+        <form id="generateForm">
+            <button type="submit" id="generateButton" class="btn btn-primary">Generate new board</button>
+            <div>
+                <label for="difficultySelector">Difficulty: </label>
+                <select name="difficulty" form="generateForm" id="difficultySelector">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </form>
+        <div class="row">
+            <form class="" id="boardForm">
+                <div id="board">
+                    <div class="row justify-content-center boardRow">
+                        <input class="inputSpace form-control" type="number" id="cell00">
+                        <input class="inputSpace form-control" type="number" id="cell01">
+                        <input class="inputSpace form-control" type="number" id="cell02">
+                        <input class="inputSpace form-control" type="number" id="cell10">
+                        <input class="inputSpace form-control" type="number" id="cell11">
+                        <input class="inputSpace form-control" type="number" id="cell12">
+                        <input class="inputSpace form-control" type="number" id="cell20">
+                        <input class="inputSpace form-control" type="number" id="cell21">
+                        <input class="inputSpace form-control" type="number" id="cell22">
+                    </div>
+                    <div class="row justify-content-center boardRow">
+                        <input class="inputSpace form-control" type="number" id="cell03">
+                        <input class="inputSpace form-control" type="number" id="cell04">
+                        <input class="inputSpace form-control" type="number" id="cell05">
+                        <input class="inputSpace form-control" type="number" id="cell13">
+                        <input class="inputSpace form-control" type="number" id="cell14">
+                        <input class="inputSpace form-control" type="number" id="cell15">
+                        <input class="inputSpace form-control" type="number" id="cell23">
+                        <input class="inputSpace form-control" type="number" id="cell24">
+                        <input class="inputSpace form-control" type="number" id="cell25">
+                    </div>
+                    <div class="row justify-content-center boardRow">
+                        <input class="inputSpace form-control" type="number" id="cell06">
+                        <input class="inputSpace form-control" type="number" id="cell07">
+                        <input class="inputSpace form-control" type="number" id="cell08">
+                        <input class="inputSpace form-control" type="number" id="cell16">
+                        <input class="inputSpace form-control" type="number" id="cell17">
+                        <input class="inputSpace form-control" type="number" id="cell18">
+                        <input class="inputSpace form-control" type="number" id="cell26">
+                        <input class="inputSpace form-control" type="number" id="cell27">
+                        <input class="inputSpace form-control" type="number" id="cell28">
+                    </div>
+                    <div class="row justify-content-center boardRow">
+                        <input class="inputSpace form-control" type="number" id="cell30">
+                        <input class="inputSpace form-control" type="number" id="cell31">
+                        <input class="inputSpace form-control" type="number" id="cell32">
+                        <input class="inputSpace form-control" type="number" id="cell40">
+                        <input class="inputSpace form-control" type="number" id="cell41">
+                        <input class="inputSpace form-control" type="number" id="cell42">
+                        <input class="inputSpace form-control" type="number" id="cell50">
+                        <input class="inputSpace form-control" type="number" id="cell51">
+                        <input class="inputSpace form-control" type="number" id="cell52">
+                    </div>
+                    <div class="row justify-content-center boardRow">
+                        <input class="inputSpace form-control" type="number" id="cell33">
+                        <input class="inputSpace form-control" type="number" id="cell34">
+                        <input class="inputSpace form-control" type="number" id="cell35">
+                        <input class="inputSpace form-control" type="number" id="cell43">
+                        <input class="inputSpace form-control" type="number" id="cell44">
+                        <input class="inputSpace form-control" type="number" id="cell45">
+                        <input class="inputSpace form-control" type="number" id="cell53">
+                        <input class="inputSpace form-control" type="number" id="cell54">
+                        <input class="inputSpace form-control" type="number" id="cell55">
+                    </div>
+                    <div class="row justify-content-center boardRow">
+                        <input class="inputSpace form-control" type="number" id="cell36">
+                        <input class="inputSpace form-control" type="number" id="cell37">
+                        <input class="inputSpace form-control" type="number" id="cell38">
+                        <input class="inputSpace form-control" type="number" id="cell46">
+                        <input class="inputSpace form-control" type="number" id="cell47">
+                        <input class="inputSpace form-control" type="number" id="cell48">
+                        <input class="inputSpace form-control" type="number" id="cell56">
+                        <input class="inputSpace form-control" type="number" id="cell57">
+                        <input class="inputSpace form-control" type="number" id="cell58">
+                    </div>
+                    <div class="row justify-content-center boardRow">
+                        <input class="inputSpace form-control" type="number" id="cell60">
+                        <input class="inputSpace form-control" type="number" id="cell61">
+                        <input class="inputSpace form-control" type="number" id="cell62">
+                        <input class="inputSpace form-control" type="number" id="cell70">
+                        <input class="inputSpace form-control" type="number" id="cell71">
+                        <input class="inputSpace form-control" type="number" id="cell72">
+                        <input class="inputSpace form-control" type="number" id="cell80">
+                        <input class="inputSpace form-control" type="number" id="cell81">
+                        <input class="inputSpace form-control" type="number" id="cell82">
+                    </div>
+                    <div class="row justify-content-center boardRow">
+                        <input class="inputSpace form-control" type="number" id="cell63">
+                        <input class="inputSpace form-control" type="number" id="cell64">
+                        <input class="inputSpace form-control" type="number" id="cell65">
+                        <input class="inputSpace form-control" type="number" id="cell73">
+                        <input class="inputSpace form-control" type="number" id="cell74">
+                        <input class="inputSpace form-control" type="number" id="cell75">
+                        <input class="inputSpace form-control" type="number" id="cell83">
+                        <input class="inputSpace form-control" type="number" id="cell84">
+                        <input class="inputSpace form-control" type="number" id="cell85">
+                    </div>
+                    <div class="row justify-content-center boardRow">
+                        <input class="inputSpace form-control" type="number" id="cell66">
+                        <input class="inputSpace form-control" type="number" id="cell67">
+                        <input class="inputSpace form-control" type="number" id="cell68">
+                        <input class="inputSpace form-control" type="number" id="cell76">
+                        <input class="inputSpace form-control" type="number" id="cell77">
+                        <input class="inputSpace form-control" type="number" id="cell78">
+                        <input class="inputSpace form-control" type="number" id="cell86">
+                        <input class="inputSpace form-control" type="number" id="cell87">
+                        <input class="inputSpace form-control" type="number" id="cell88">
+                    </div>
+                </div>
+                <button type="submit" id="validateButton" class="btn btn-primary">Validate sudoku</button>
+            </form>
+        </div>
+        <div class="col-sm-4 alert alert-success border border-secondary" id="resultMsg" role="alert"></div>
+    </main>
+    <p id="sudokuId" hidden></p>
+</body>
+
+</html>

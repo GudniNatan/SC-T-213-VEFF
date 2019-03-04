@@ -2,34 +2,34 @@
 
 describe('doPythagoras function', function () {
     //basic test
-    it('should return the hypotenuse as 5 where the other two sides are 3 and 4', function () {
-        chai.expect(doPythagoras(3, 4)).to.equal(5);
+    it('should return the hypotenuse as 5 (to 2 digits of accuracy) where the other two sides are 3 and 4', function () {
+        chai.expect(Number(doPythagoras(3, 4).toFixed(2))).to.equal(5);
     });
     //Parameterised test with positive numbers
     for (let a = 0; a < 5; a++) {
         for (let b = 0; b < 5; b++) {
             let c = Number((Math.sqrt(a * a + b * b)).toFixed(2));
-            it('should return the hypotenuse as ' + c + ' where the other two sides are ' + a + ' and ' + b, function () {
+            it('should return the hypotenuse as ' + c + ' (to 2 digits of accuracy) where the other two sides are ' + a + ' and ' + b, function () {
                 chai.expect(Number(doPythagoras(a, b).toFixed(2))).to.equal(Number(c.toFixed(2)));
             });
         }
     }
     //Negative numbers
-    it('should return "Negative numbers" when a is less than zero', function () {
+    it('should return "Negative numbers" when a is a negative number', function () {
         chai.expect(doPythagoras(-5, 3)).to.equal("Negative numbers");
     });
-    it('should return "Negative numbers" when b is less than zero', function () {
+    it('should return "Negative numbers" when b is a negative number', function () {
         chai.expect(doPythagoras(5, -3)).to.equal("Negative numbers");
     });
-    it('should return "Negative numbers" when a and b are less than zero', function () {
+    it('should return "Negative numbers" when a and b are negative numbers', function () {
         chai.expect(doPythagoras(-1, -2)).to.equal("Negative numbers");
     });
     // Negative number and NaN
-    it('should return "Negative numbers" when a is less than zero, and b is NaN', function () {
+    it('should return "Negative numbers" when a is a negative number, and b is NaN', function () {
         chai.expect(doPythagoras(-4, "wow")).to.equal("Negative numbers");
     });
     // NaNs
-    it('should return "Invalid input" if either a or b are NaN and neither is negative', function () {
+    it('should return "Invalid input" if either a or b are NaN and neither are negative', function () {
         chai.expect(doPythagoras("test", 6)).to.equal("Invalid input");
     });
     it('should return "Invalid input" if both a and b are NaN', function () {
@@ -38,6 +38,9 @@ describe('doPythagoras function', function () {
 });
 
 describe('checkURL function', function () {
+    it('should return false if the input is not a string', function () {
+        chai.expect(checkURL(42)).to.equal(false);
+    });
     it('should return false if the input is an empty string', function () {
         chai.expect(checkURL("")).to.equal(false);
     });
