@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
     var parsedURL = url.parse(req.url, true);
     if (req.method === "GET" && parsedURL.pathname === "/divide") {
         var q = parsedURL.query;
-        if (q.a !== undefined && q.b !== undefined) {
+        if (q.a !== undefined && q.b !== undefined && Object.keys(q).length === 2) {
             res.writeHead(200, { 'Content-Type': 'text/plain' });
             res.end(math.stringifyDivision(q.a, q.b));
             return;
