@@ -1,0 +1,12 @@
+__filename: "c:\GitHub\SC-T-213-VEFF\Lab 6\mathUser.js"
+divResult: undefined
+
+(anonymous function) (c:\GitHub\SC-T-213-VEFF\Lab 6\mathUser.js:5)
+Module._compile (loader.js:698)
+Module._extensions..js (loader.js:712)
+Module.load (loader.js:600)
+tryModuleLoad (loader.js:539)
+Module._load (loader.js:531)
+Module.runMain (loader.js:754)
+startup (node.js:283)
+bootstrapNodeJSCore (node.js:622)

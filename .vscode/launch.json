@@ -7,6 +7,20 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Mocha Tests",
+            "program": "${workspaceFolder}/Project 4/node_modules/mocha/bin/_mocha",
+            "args": [
+                "--timeout",
+                "999999",
+                "--colors",
+                "${workspaceFolder}/Project 4/test/app.test.js"
+            ],
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Node debug",
             "program": "${file}"
         },

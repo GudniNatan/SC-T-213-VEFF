@@ -1,0 +1,17 @@
+{
+  "name": "mathproject",
+  "version": "1.0.0",
+  "description": "A sample project to do some math.",
+  "main": "math.js",
+  "scripts": {
+    "start": "node math.js",
+    "test": "node ./node_modules/mocha/bin/mocha ./tests/*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "sinon": "^7.2.7"
+  }
+}
