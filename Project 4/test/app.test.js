@@ -199,7 +199,7 @@ describe('Endpoint tests', () => {
             });
     });
 
-    it('POST /api/v1/stations/:stationId/observations should fail when missing an argument in the body', (done) => {
+    it('POST /api/v1/stations/:stationId/observations should fail when humudidity over 100', (done) => {
         let observation = { "temp": 5.5, "windSpeed": 12.5, "windDir": "sw", "hum": 205.3, "prec": 3.0 };
         chai.request("http://localhost:3000")
             .post(`/api/v1/stations/${stationId}/observations`)
@@ -214,10 +214,10 @@ describe('Endpoint tests', () => {
             });
     });
     
-    it("/api/v1/stations with unsupported verb (OPTIONS) failure case", function (done) {
+    it("/api/v1/stations with unsupported verb (PATCH) failure case", function (done) {
         console.log(stationId);
         chai.request("http://localhost:3000")
-            .options("/api/v1/stations").end((err, res) => {
+            .patch("/api/v1/stations").end((err, res) => {
                 chai.expect(res).to.have.status(405);
                 done();
             });
@@ -230,6 +230,8 @@ describe('Endpoint tests', () => {
         chai.request("http://localhost:3000")
             .get("/api/v1/stations?description[$ne]=Reykjavik").end((err, res) => {
                 chai.expect(res).to.have.status(200);
+                chai.expect(res).to.be.json;
+                chai.expect(res.body).to.deep.equal([]);
                 done();
             });
     });

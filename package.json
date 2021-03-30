@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/GudniNatan/SC-T-213-VEFF/issues"
   },
-  "homepage": "https://github.com/GudniNatan/SC-T-213-VEFF#readme"
+  "homepage": "https://github.com/GudniNatan/SC-T-213-VEFF#readme",
+  "dependencies": {
+    "learnyounode": "^3.5.10"
+  }
 }

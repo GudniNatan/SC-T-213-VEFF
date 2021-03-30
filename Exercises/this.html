@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This</title>
+</head>
+<body>
+    <script>
+        var myPerson = (function () { 
+            var ssid = '12345';
+            var getSSID = function(){
+                logSSIDReq();
+                return ssid;
+            }
+            var logSSIDReq = function() {
+                console.log("SSID Returned");
+            }
+            return {getSSID: getSSID};
+        })();
+        console.log(myPerson.ssid);
+        //myPerson.logSSIDReq();
+        console.log(myPerson.getSSID());
+    </script>
+</body>
+</html>
